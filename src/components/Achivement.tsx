@@ -6,7 +6,7 @@ type AchivementProps = {
 
 export default function Achivement({ percent, date }: AchivementProps) {
   return (
-    <div className="w-[40vh] h-[40vh] bg-cover bg-no-repeat bg-center flex items-center justify-center" style={{backgroundImage: `url('/main_photo.png')`}}>
+    <div className="h-full bg-cover bg-no-repeat bg-center flex items-center justify-center" style={{backgroundImage: `url('/main_photo.png')`}}>
     <div
       className="radial-progress flex justify-center items-center gap-2 shadow shadow-circle text-white"
       style={

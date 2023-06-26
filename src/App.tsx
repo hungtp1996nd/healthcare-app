@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
 import Layout from "./components/layout/Layout";
-import Achivement from "./components/Achivement";
+import Home from "./pages/Home";
 
 function App() {
-  return <Layout>Hello world!
-
-    <Achivement date="5/21" percent={60} />
-  </Layout>;
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 }
 
 export default App;

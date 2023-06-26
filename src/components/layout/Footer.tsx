@@ -3,7 +3,7 @@ const footers: string[] = ['会員登録', '運営会社', '利用規約', '個�
 export default function Footer() {
     return (
         <div className="w-full h-32 bg-header px-40 flex items-center text-white gap-10">
-            {footers.map((footerItem: string) => <span className="cursor-pointer">{footerItem}</span>)}
+            {footers.map((footerItem: string) => <span className="cursor-pointer" key={footerItem}>{footerItem}</span>)}
         </div>
     )
 }

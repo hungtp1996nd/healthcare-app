@@ -32,7 +32,7 @@ export default function Header() {
         <HeaderLogo className="w-36" />
         <div className="flex gap-10">
           {headerConfig.map((navItem: HeaderConfig) => (
-            <div className="flex gap-2 justify-center items-center text-white">
+            <div className="flex gap-2 justify-center items-center text-white" key={navItem.title}>
               {navItem.icon} {navItem.title}
             </div>
           ))}
