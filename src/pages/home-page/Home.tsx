@@ -1,10 +1,10 @@
-import BodyGraph from "../components/BodyGraph";
-import Achivement from "../components/Achivement";
-import { ReactComponent as Morining } from "../assets/morning.svg";
-import { ReactComponent as Lunch } from "../assets/lunch.svg";
-import { ReactComponent as Dinner } from "../assets/dinner.svg";
-import { ReactComponent as Snack } from "../assets/snack.svg";
-import ImageList from "../components/ImageList";
+import BodyGraph from "../../components/BodyGraph";
+import Achivement from "../../components/Achivement";
+import { ReactComponent as Morining } from "../../assets/morning.svg";
+import { ReactComponent as Lunch } from "../../assets/lunch.svg";
+import { ReactComponent as Dinner } from "../../assets/dinner.svg";
+import { ReactComponent as Snack } from "../../assets/snack.svg";
+import ImageList from "../../components/ImageList";
 
 const navs = [
   {
@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <div className="grid grid-cols-10 h-[30vh] w-full mb-28">
         <div className="h-[40vh] col-span-4">
-          <Achivement date="5/21" percent={60} />
+          <Achivement date="5/21" percent={30} />
         </div>
         <div className="h-[40vh] w-full col-span-6">
           <BodyGraph />

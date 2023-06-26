@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 import Layout from "./components/layout/Layout";
-import Home from "./pages/Home";
+import RenderRouter from "./routers/RenderRouter";
 
 function App() {
   return (
     <Layout>
-      <Home />
+      <RenderRouter />
     </Layout>
   );
 }
