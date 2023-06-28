@@ -27,6 +27,7 @@ export const options = {
     legend: {
       position: "top" as const,
     },
+    title: {}
   },
   backgroundColor: "red",
 };
@@ -64,7 +65,25 @@ export const data = {
   ],
 };
 
-export default function BodyGraph() {
+type BodyGraphProps = {
+  title?: string
+}
+
+export default function BodyGraph({ title }: BodyGraphProps) {
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+      },
+      title: {
+        display: !!title,
+        text: title
+      }
+    },
+    backgroundColor: "red",
+  };
+  
   useEffect(() => {
     ChartJS.register({
       id: "custom_canvas_background_color",

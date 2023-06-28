@@ -1,65 +1,55 @@
-import m01 from "../assets/images/m01.jpg";
-import m02 from "../assets/images/m02.jpg";
-import m03 from "../assets/images/m03.jpg";
-import l01 from "../assets/images/l01.jpg";
-import l02 from "../assets/images/l02.jpg";
-import l03 from "../assets/images/l03.jpg";
-import d01 from "../assets/images/d01.jpg";
-import d02 from "../assets/images/d02.jpg";
-import s01 from "../assets/images/s01.jpg";
-
 const images = [
   {
     title: "Morning 1",
-    img: m01,
+    img: "/images/topPage/deal6.jpg",
     date: "05.21",
     category: "Morning",
   },
   {
     title: "Morning 2",
-    img: m02,
+    img: '/images/topPage/deal7.jpg',
     date: "05.21",
     category: "Morning",
   },
   {
     title: "Morning 3",
-    img: m03,
+    img: "/images/topPage/deal8.jpg",
     date: "05.21",
     category: "Morning",
   },
   {
     title: "Lunch 1",
-    img: l01,
+    img: "/images/topPage/deal3.jpg",
     date: "05.21",
     category: "Lunch",
   },
   {
     title: "Lunch 2",
-    img: l02,
+    img: "/images/topPage/deal4.jpg",
     date: "05.21",
     category: "Lunch",
   },
   {
     title: "Lunch 3",
-    img: l03,
+    img: "/images/topPage/deal5.jpg",
     date: "05.21",
     category: "Lunch",
   },
   {
     title: "Dinner 1",
-    img: d01,
+    img: "/images/topPage/deal1.jpg",
     date: "05.21",
     category: "Dinner",
   },
   {
     title: "Dinner 2",
-    img: d02,
+    img: "/images/topPage/deal2.jpg",
     date: "05.21",
     category: "Dinner",
   },
   {
     title: "Snack 1",
-    img: s01,
+    img: "/images/topPage/deal9.jpg",
     date: "05.21",
     category: "Snack",
   },
