@@ -5,6 +5,7 @@ import { ReactComponent as Morining } from "../assets/morning.svg";
 import { ReactComponent as Lunch } from "../assets/lunch.svg";
 import { ReactComponent as Dinner } from "../assets/dinner.svg";
 import { ReactComponent as Snack } from "../assets/snack.svg";
+import SeeMoreButton from "./SeeMoreButton";
 
 const navs = [
   {
@@ -31,11 +32,14 @@ const navs = [
 
 export default function ImageList() {
   const [typeMeal, setTypeMeal] = useState<string | null>(null);
-  const { data: meals, mutate: refetchMeals } = useSWR("getMeals", () => fetchMeals(typeMeal));
+  const [size, setSize] = useState(8);
+  const { data: meals, mutate: refetchMeals } = useSWR("getMeals", () =>
+    fetchMeals(size, typeMeal)
+  );
 
   useEffect(() => {
-    refetchMeals()
-  }, [typeMeal, refetchMeals])
+    refetchMeals();
+  }, [typeMeal, refetchMeals, size]);
 
   return (
     <>
@@ -52,7 +56,7 @@ export default function ImageList() {
         </div>
         <div className="grid grid-cols-4 overflow-y-auto list-none gap-3 px-[calc((100%-960px)/2)] mt-8">
           {meals &&
-            meals?.data.map((img) => (
+            meals?.data?.map((img) => (
               <div className="w-[240px]" key={img.title}>
                 <div className="relative">
                   <img
@@ -68,6 +72,12 @@ export default function ImageList() {
               </div>
             ))}
         </div>
+      </div>
+      <div className="pt-8 pb-14 flex justify-center">
+        <SeeMoreButton
+          title="記録をもっと見る"
+          onClick={() => setSize((prev) => prev + 8)}
+        />
       </div>
     </>
   );

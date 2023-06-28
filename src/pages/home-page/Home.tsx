@@ -4,8 +4,6 @@ import ImageList from "../../components/ImageList";
 import useSWR from "swr";
 import { fetchHealths } from "../../apis/myRecord";
 
-
-
 export default function Home() {
   const { data } = useSWR("getHealths", fetchHealths);
   return (

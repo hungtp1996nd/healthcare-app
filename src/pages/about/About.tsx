@@ -6,7 +6,6 @@ export default function About() {
     <div className="pt-14 pb-16 flex flex-col gap-14 max-w-[960px] m-auto overflow-auto">
       <Recommend />
       <NewList />
-      {/* <SeeMoreButton title={t('column.seeMore')} /> */}
     </div>
   );
 }
