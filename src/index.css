@@ -44,3 +44,8 @@ code {
     justify-content: center;
   }
 }
+
+.new-list {
+  grid-template-columns: repeat(auto-fill, 234px);
+  grid-gap: 18px 8px;
+}
