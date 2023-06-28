@@ -2,5 +2,91 @@
   "healths": {
     "primaryDate": "05/21",
     "percent": "75"
+  },
+  "meals": [
+    {
+      "title": "Morning 1",
+      "img": "/images/topPage/deal6.jpg",
+      "date": "05.21",
+      "category": "Morning"
+    },
+    {
+      "title": "Morning 2",
+      "img": "/images/topPage/deal7.jpg",
+      "date": "05.21",
+      "category": "Morning"
+    },
+    {
+      "title": "Morning 3",
+      "img": "/images/topPage/deal8.jpg",
+      "date": "05.21",
+      "category": "Morning"
+    },
+    {
+      "title": "Lunch 1",
+      "img": "/images/topPage/deal3.jpg",
+      "date": "05.21",
+      "category": "Lunch"
+    },
+    {
+      "title": "Lunch 2",
+      "img": "/images/topPage/deal4.jpg",
+      "date": "05.21",
+      "category": "Lunch"
+    },
+    {
+      "title": "Lunch 3",
+      "img": "/images/topPage/deal5.jpg",
+      "date": "05.21",
+      "category": "Lunch"
+    },
+    {
+      "title": "Dinner 1",
+      "img": "/images/topPage/deal1.jpg",
+      "date": "05.21",
+      "category": "Dinner"
+    },
+    {
+      "title": "Dinner 2",
+      "img": "/images/topPage/deal2.jpg",
+      "date": "05.21",
+      "category": "Dinner"
+    },
+    {
+      "title": "Snack 1",
+      "img": "/images/topPage/deal9.jpg",
+      "date": "05.21",
+      "category": "Snack"
+    }
+  ],
+  "bodyGraph": {
+    "labels": [
+      "6月",
+      "7月",
+      "8月",
+      "9月",
+      "10月",
+      "11月",
+      "12月",
+      "1月",
+      "2月",
+      "3月",
+      "4月",
+      "5月"
+    ],
+    "datasets": [
+      {
+        "label": "",
+        "data": [100, 95, 70, 75, 72, 65, 71, 63, 60, 58, 56, 58],
+        "borderColor": "#FFCC21",
+        "backgroundColor": "#FFCC21"
+      },
+      {
+        "label": "",
+        "data": [100, 92, 72, 71, 63, 62, 60, 58, 55, 35, 15, 5],
+        "borderColor": "#8FE9D0",
+        "backgroundColor": "#8FE9D0"
+      }
+    ]
   }
 }

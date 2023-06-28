@@ -10,6 +10,8 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import useSWR from "swr";
+import { fetchBodyGraph } from "../apis/myRecord";
 
 ChartJS.register(
   CategoryScale,
@@ -21,55 +23,16 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top" as const,
-    },
-    title: {}
-  },
-  backgroundColor: "red",
-};
-
-const labels = [
-  "6月",
-  "7月",
-  "8月",
-  "9月",
-  "10月",
-  "11月",
-  "12月",
-  "1月",
-  "2月",
-  "3月",
-  "4月",
-  "5月",
-];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "",
-      data: [100, 95, 70, 75, 72, 65, 71, 63, 60, 58, 56, 58],
-      borderColor: "#FFCC21",
-      backgroundColor: "#FFCC21",
-    },
-    {
-      label: "",
-      data: [100, 92, 72, 71, 63, 62, 60, 58, 55, 35, 15, 5],
-      borderColor: "#8FE9D0",
-      backgroundColor: "#8FE9D0",
-    },
-  ],
-};
-
 type BodyGraphProps = {
-  title?: string
-}
+  title?: string;
+};
 
 export default function BodyGraph({ title }: BodyGraphProps) {
+  const { data } = useSWR("getBodyGraph", fetchBodyGraph);
+  const dataBody = {
+    labels: [...data?.data?.labels || []],
+    datasets: [...data?.data?.datasets || []]
+  }
   const options = {
     responsive: true,
     plugins: {
@@ -78,12 +41,11 @@ export default function BodyGraph({ title }: BodyGraphProps) {
       },
       title: {
         display: !!title,
-        text: title
-      }
+        text: title,
+      },
     },
-    backgroundColor: "red",
   };
-  
+
   useEffect(() => {
     ChartJS.register({
       id: "custom_canvas_background_color",
@@ -98,6 +60,10 @@ export default function BodyGraph({ title }: BodyGraphProps) {
     });
   }, []);
   return (
-      <Line options={options} data={data} className="!w-full" />
+    <Line
+      options={options}
+      data={dataBody}
+      className="!w-full"
+    />
   );
 }
